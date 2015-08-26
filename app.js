@@ -9,7 +9,7 @@ var express = require('express'),
 var done = false;
 
 //var db = mongoose.connect('mongodb://localhost/bookAPI');
-var db = mongoose.connect(' mongodb://connect_me:connect_me@yahoo.com:1234/bookAPI');
+var db = mongoose.connect('mongodb://mukum:sherma@ds035683.mongolab.com:35683/msapptest');
 
 var Book = require('./models/bookModel');
 
