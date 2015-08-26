@@ -8,7 +8,8 @@ var express = require('express'),
     multer = require('multer'); //loading 'multer' module, it's a middleware that handles the file/image upload
 var done = false;
 
-var db = mongoose.connect('mongodb://localhost/bookAPI');
+//var db = mongoose.connect('mongodb://localhost/bookAPI');
+var db = mongoose.connect(' mongodb://connect_me:connect_me@yahoo.com:1234/bookAPI');
 
 var Book = require('./models/bookModel');
 
@@ -24,7 +25,7 @@ bookRouter = require('./Routes/bookRoutes')(Book); //"()" executes the function
 
 app.use('/api/books',bookRouter);
 app.use('/api/authors',bookRouter);
-//access in browser >localhost:3000/api/Books //books is case insensitive
+//access in browser >localhost:3000/api/Books //books is case insensitive //....######......
 
 //configure the multer
 app.use(multer({
